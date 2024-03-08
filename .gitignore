@@ -36,4 +36,4 @@ build/
 node_modules
 
 ## Secrets ##
-/backend/src/resources/application.properties
+/backend/src/main/resources/application.properties
