@@ -32,7 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 
-## Frontedn ##
+## Frontend ##
 node_modules
 
 ## Secrets ##

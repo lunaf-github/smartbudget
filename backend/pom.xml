@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.smartbudget</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>smartbudgetapplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>smartbudget</name>
 	<description>Envelope budgeting App</description>
