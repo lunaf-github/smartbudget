@@ -11,6 +11,7 @@ public class CategoryMapper {
     }
 
     public static Category mapToCategory(CategoryDto categoryDto) {
+        System.out.println(categoryDto.getName());
         return new Category(
                 categoryDto.getId(),
                 categoryDto.getName());
