@@ -5,8 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-// import java.util.Date;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,6 +14,5 @@ public class TransactionDto {
     private long id;
     private String description;
     private Integer amount;
-    // private Date date;
-
+    private long user_id;
 }

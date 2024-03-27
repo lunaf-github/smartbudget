@@ -7,7 +7,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -50,17 +53,8 @@ public class Transaction {
     @Column(name = "amount", nullable = false)
     private Integer amount;
 
-    // @Column(name = "transaction_date", nullable = false)
-    // private Date date;
-
-    // @ManyToOne
-    // private Category category;
-
-    // @ManyToOne
-    // private Subcategory subcategory;
-
-    // @ManyToOne
-
-    // private Counterparty counterparty;
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "user_id")
+    private User user;
 
 }
