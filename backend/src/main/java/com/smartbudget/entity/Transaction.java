@@ -57,4 +57,8 @@ public class Transaction {
     @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "user_id")
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id", nullable = false, referencedColumnName = "category_id")
+    private Category category;
+
 }

@@ -15,4 +15,5 @@ public class TransactionDto {
     private String description;
     private Integer amount;
     private long user_id;
+    private long category_id;
 }

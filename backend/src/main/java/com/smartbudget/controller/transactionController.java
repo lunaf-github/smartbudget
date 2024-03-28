@@ -19,6 +19,7 @@ import lombok.AllArgsConstructor;
 
 public class transactionController {
 
+    // Constructor-based dependency injection
     private TransactionService transactionService;
 
     @PostMapping("/add")
