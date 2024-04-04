@@ -1,30 +1,34 @@
-// package com.smartbudget.entity;
+package com.smartbudget.entity;
 
-// import java.util.List;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-// import jakarta.persistence.Column;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
-// import jakarta.persistence.ManyToOne;
-// import jakarta.persistence.OneToMany;
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 
-// public class Subcategory {
+@Entity
+@Table(name = "subcategories")
+public class Subcategory {
 
-// // From jakarta.persistence package, define the table primary id
-// // From jakarta.persistence package, configure primary keys, the current
-// // strategy auto increments id
-// @Id
+    // From jakarta.persistence package, define the table primary id
+    // From jakarta.persistence package, configure primary keys, the current
+    // strategy auto increments id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "subcategory_id")
+    private Long id;
 
-// @GeneratedValue(strategy = GenerationType.IDENTITY)
-// private Long id;
+    @Column(name = "name")
+    private String name;
 
-// @Column(name = "name")
-// private String name;
-
-// @OneToMany(mappedBy = "subcategory")
-// private List<Transaction> transactions;
-
-// @ManyToOne
-// private Category category;
-// }
+}
