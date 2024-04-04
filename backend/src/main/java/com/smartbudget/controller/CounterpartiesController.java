@@ -22,9 +22,7 @@ public class CounterpartiesController {
     @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public CounterpartyDto addCounterpart(@RequestBody CounterpartyDto counterpartyDto) {
-        System.out.println("hello");
-        CounterpartyDto savedCounterparty = counterpartyService.createCounterparty(counterpartyDto);
-        return savedCounterparty;
+        return counterpartyService.createCounterparty(counterpartyDto);
     }
 
 }
