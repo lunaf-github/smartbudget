@@ -1,26 +1,32 @@
-// package com.smartbudget.entity;
+package com.smartbudget.entity;
 
-// import java.util.Set;
-// import java.util.HashSet;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-// import jakarta.persistence.Column;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
-// import jakarta.persistence.OneToMany;
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 
-// public class Counterparty {
+@Entity
+@Table(name = "counterparties")
+public class Counterparty {
+    // From jakarta.persistence package, define the table primary id
+    // From jakarta.persistence package, configure primary keys, the current
+    // strategy auto increments id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "counterparty_id")
+    private Long id;
 
-// // From jakarta.persistence package, define the table primary id
-// // From jakarta.persistence package, configure primary keys, the current
-// // strategy auto increments id
-// @Id
-// @GeneratedValue(strategy = GenerationType.IDENTITY)
-// private Long id;
-
-// @Column(name = "name")
-// private String name;
-
-// @OneToMany(mappedBy = "transaction")
-// private Set<Transaction> transactions = new HashSet<>();
-// }
+    @Column(name = "name")
+    private String name;
+}
