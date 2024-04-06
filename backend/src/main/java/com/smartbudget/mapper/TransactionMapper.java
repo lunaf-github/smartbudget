@@ -2,6 +2,7 @@ package com.smartbudget.mapper;
 
 import com.smartbudget.dto.TransactionDto;
 import com.smartbudget.entity.Category;
+import com.smartbudget.entity.Counterparty;
 import com.smartbudget.entity.Transaction;
 import com.smartbudget.entity.User;
 
@@ -13,16 +14,19 @@ public class TransactionMapper {
                 transaction.getDescription(),
                 transaction.getAmount(),
                 transaction.getUser().getId(),
-                transaction.getCategory().getId());
+                transaction.getCategory().getId(),
+                transaction.getCounterparty().getId());
     }
 
-    public static Transaction mapToTransaction(TransactionDto transactionDto, User user, Category category) {
+    public static Transaction mapToTransaction(TransactionDto transactionDto, User user, Category category,
+            Counterparty counterparty) {
 
         return new Transaction(
                 transactionDto.getId(),
                 transactionDto.getDescription(),
                 transactionDto.getAmount(),
                 user,
-                category);
+                category,
+                counterparty);
     }
 }

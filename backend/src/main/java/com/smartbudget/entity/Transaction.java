@@ -61,4 +61,8 @@ public class Transaction {
     @JoinColumn(name = "category_id", nullable = false, referencedColumnName = "category_id")
     private Category category;
 
+    @ManyToOne
+    @JoinColumn(name = "counterparty_id", nullable = false, referencedColumnName = "id")
+    private Counterparty counterparty;
+
 }
