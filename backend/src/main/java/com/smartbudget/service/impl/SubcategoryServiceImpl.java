@@ -1,5 +1,7 @@
 package com.smartbudget.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import com.smartbudget.dto.SubcategoryDto;
 import com.smartbudget.entity.Subcategory;
 import com.smartbudget.mapper.SubcategoryMapper;
@@ -8,6 +10,7 @@ import com.smartbudget.service.SubcategoryService;
 
 import lombok.AllArgsConstructor;
 
+@Service
 @AllArgsConstructor
 public class SubcategoryServiceImpl implements SubcategoryService {
 

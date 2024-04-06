@@ -31,6 +31,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public TransactionDto createTransaction(TransactionDto transactionDto) {
+
         User user = userRepository.findById(transactionDto.getUser_id()).orElse(null);
         Category category = categoryRepository.findById(transactionDto.getCategory_id()).orElse(null);
         Counterparty counterparty = counterpartyRepository.findById(transactionDto.getCounterparty_id()).orElse(null);
