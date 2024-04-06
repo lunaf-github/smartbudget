@@ -42,7 +42,7 @@ public class Transaction {
     // strategy auto increments id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "transaction_id")
+    @Column(name = "id")
     private Long id;
 
     // Gives properties to column, in this case gives a name to column, else the
@@ -54,15 +54,19 @@ public class Transaction {
     private Integer amount;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "user_id")
+    @JoinColumn(name = "user_id", nullable = false, referencedColumnName = "id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false, referencedColumnName = "category_id")
+    @JoinColumn(name = "category_id", nullable = false, referencedColumnName = "id")
     private Category category;
 
     @ManyToOne
     @JoinColumn(name = "counterparty_id", nullable = false, referencedColumnName = "id")
     private Counterparty counterparty;
+
+    @ManyToOne
+    @JoinColumn(name = "subcategory_id", nullable = false, referencedColumnName = "id")
+    private Subcategory subcategory;
 
 }

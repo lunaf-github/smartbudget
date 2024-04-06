@@ -25,7 +25,7 @@ public class Counterparty {
     // strategy auto increments id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "counterparty_id")
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "name")

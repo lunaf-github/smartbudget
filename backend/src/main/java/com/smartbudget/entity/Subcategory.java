@@ -25,7 +25,7 @@ public class Subcategory {
     // strategy auto increments id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "subcategory_id")
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "name")

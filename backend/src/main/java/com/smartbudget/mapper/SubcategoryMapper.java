@@ -6,7 +6,7 @@ import com.smartbudget.entity.Subcategory;
 public class SubcategoryMapper {
     public static Subcategory mapToSubcategory(SubcategoryDto subcategoryDto) {
         return new Subcategory(
-                subcategoryDto.getSubcategoryId(),
+                subcategoryDto.getId(),
                 subcategoryDto.getName());
     }
 
