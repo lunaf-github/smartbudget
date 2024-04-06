@@ -17,4 +17,5 @@ public class TransactionDto {
     private long user_id;
     private long category_id;
     private long counterparty_id;
+    private long subcategory_id;
 }
